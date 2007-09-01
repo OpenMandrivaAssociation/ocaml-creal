@@ -1,7 +1,7 @@
 %define base_name	creal
 %define name		ocaml-%{base_name}
 %define version		0.7
-%define release		%mkrel 1
+%define release		%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -32,6 +32,8 @@ Written by Jean-Christophe Filliâtre.
 %package devel
 Summary:	Exact real arithmetic for Objective Caml
 Group:		Development/Other
+Requires:   gmp-devel
+Requires:   %{name} = %{version}-%{release}
 
 %description devel
 Creal is an exact real arithmetic library for Objective Caml.	
@@ -47,16 +49,22 @@ perl -pi -e 's/\015$//' README
 
 %install
 rm -rf %{buildroot}
-destdir=`ocamlc -where`
-install -d %{buildroot}$destdir
-make LIBDIR=%{buildroot}%{_libdir}/ocaml/%{base_name} install-lib
+destdir=%{buildroot}%{ocaml_sitelib}/%{base_name}
+install -d $destdir
+make LIBDIR=$destdir install-lib
 
 %clean
 rm -rf %{buildroot}
 
-%files devel
+%files
 %defattr(-,root,root)
 %doc README CHANGES
-%{_libdir}/ocaml/%{base_name}
+%dir %{ocaml_sitelib}/creal
+%{ocaml_sitelib}/creal/*.cmi
+
+%files devel
+%defattr(-,root,root)
+%{ocaml_sitelib}/creal/*
+%exclude %{ocaml_sitelib}/creal/*.cmi
 
 
