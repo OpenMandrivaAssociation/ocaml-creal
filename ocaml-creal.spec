@@ -49,9 +49,8 @@ perl -pi -e 's/\015$//' README
 
 %install
 rm -rf %{buildroot}
-destdir=%{buildroot}%{ocaml_sitelib}/%{base_name}
-install -d $destdir
-make LIBDIR=$destdir install-lib
+install -d %{buildroot}%{ocaml_sitelib}/%{base_name}
+make LIBDIR=%{buildroot}%{ocaml_sitelib}/%{base_name} install-lib
 
 %clean
 rm -rf %{buildroot}
@@ -66,5 +65,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{ocaml_sitelib}/creal/*
 %exclude %{ocaml_sitelib}/creal/*.cmi
-
-
