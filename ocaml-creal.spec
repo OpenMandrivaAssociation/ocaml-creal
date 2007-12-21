@@ -13,6 +13,7 @@ License:	LGPL
 Group:		Development/Other
 BuildRequires:	ocaml
 BuildRequires:  gmp-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Creal is an exact real arithmetic library for Objective Caml.	
