@@ -1,14 +1,14 @@
 %define base_name	creal
 %define name		ocaml-%{base_name}
 %define version		0.7
-%define release		%mkrel 5
+%define release		%mkrel 6
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	Exact real arithmetic for Objective Caml
-Source: 	http://www.lri.fr/~filliatr/ftp/ocaml/ds/%{base_name}-%{version}.tar.bz2
 URL:		http://www.lri.fr/~filliatr/software.en.html
+Source: 	http://www.lri.fr/~filliatr/ftp/ocaml/ds/%{base_name}-%{version}.tar.bz2
 License:	LGPL
 Group:		Development/Other
 BuildRequires:	ocaml
@@ -49,8 +49,8 @@ perl -pi -e 's/\015$//' README
 
 %install
 rm -rf %{buildroot}
-install -d %{buildroot}%{ocaml_sitelib}/%{base_name}
-make LIBDIR=%{buildroot}%{ocaml_sitelib}/%{base_name} install-lib
+install -d %{buildroot}%{_libdir}/ocaml/%{base_name}
+make LIBDIR=%{buildroot}%{_libdir}/ocaml/%{base_name} install-lib
 
 %clean
 rm -rf %{buildroot}
@@ -58,10 +58,12 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc README CHANGES
-%dir %{ocaml_sitelib}/creal
-%{ocaml_sitelib}/creal/*.cmi
+%dir %{_libdir}/ocaml/creal
+%{_libdir}/ocaml/creal/*.cmi
+%{_libdir}/ocaml/creal/*.cma
 
 %files devel
 %defattr(-,root,root)
-%{ocaml_sitelib}/creal/*
-%exclude %{ocaml_sitelib}/creal/*.cmi
+%{_libdir}/ocaml/creal/*.a
+%{_libdir}/ocaml/creal/*.cmxa
+%{_libdir}/ocaml/creal/*.mli
