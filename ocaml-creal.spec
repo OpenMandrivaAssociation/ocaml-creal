@@ -9,7 +9,7 @@ Release:	%{release}
 Summary:	Exact real arithmetic for Objective Caml
 URL:		http://www.lri.fr/~filliatr/software.en.html
 Source0:	http://www.lri.fr/~filliatr/ftp/ocaml/ds/%{base_name}-%{version}.tar.bz2
-Source1:	ocaml-cairo-META
+Source1:	ocaml-creal-META
 License:	LGPL
 Group:		Development/Other
 BuildRequires:	ocaml
