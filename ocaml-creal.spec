@@ -1,7 +1,7 @@
 %define base_name	creal
 %define name		ocaml-%{base_name}
 %define version		0.7
-%define release		%mkrel 7
+%define release		%mkrel 8
 
 Name:		%{name}
 Version:	%{version}
