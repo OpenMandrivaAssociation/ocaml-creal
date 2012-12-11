@@ -71,3 +71,61 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/creal/*.a
 %{_libdir}/ocaml/creal/*.cmxa
 %{_libdir}/ocaml/creal/*.mli
+
+
+%changelog
+* Sat Jun 27 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.7-8mdv2010.0
++ Revision: 390037
+- rebuild
+
+* Sat May 23 2009 Florent Monnier <blue_prawn@mandriva.org> 0.7-7mdv2010.0
++ Revision: 379079
+- added META file
+- incremented rel number
+- added META file
+
+* Mon Dec 29 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.7-6mdv2009.1
++ Revision: 320733
+- move non-devel files in main package
+- site-lib hierarchy doesn't exist anymore
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.7-5mdv2009.0
++ Revision: 254191
+- rebuild
+
+* Tue Mar 04 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.7-3mdv2008.1
++ Revision: 178366
+- rebuild
+- cleanup
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Sep 01 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.7-2mdv2008.0
++ Revision: 77577
+- compliance with ocaml policy
+
+
+* Thu Jan 25 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.7-1mdv2007.0
++ Revision: 113168
+- new version
+- Import ocaml-creal
+
+* Tue Aug 29 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-5mdv2007.0
+- Rebuild
+
+* Wed Apr 26 2006 Pixel <pixel@mandriva.com> 0.6-4mdk
+- rebuild for new ocaml
+
+* Thu Jan 19 2006 Pixel <pixel@mandriva.com> 0.6-3mdk
+- rebuild for new ocaml
+
+* Mon Nov 07 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-2mdk
+- rebuild for new ocaml
+
+* Wed Nov 02 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-1mdk
+- contributed by Julien Narboux (Julien.Narboux@inria.fr)
+

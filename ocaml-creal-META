@@ -1,0 +1,5 @@
+name = "creal"
+description = "Exact real arithmetic for OCaml."
+version = "@VERSION@"
+archive(byte) = "creal.cma"
+archive(native) = "creal.cmxa"
