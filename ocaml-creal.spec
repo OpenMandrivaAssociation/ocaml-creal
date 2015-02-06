@@ -6,7 +6,7 @@
 Summary:	Exact real arithmetic for Objective Caml
 Name:		ocaml-%{modname}
 Version:	0.7
-Release:	9
+Release:	10
 License:	LGPLv2+
 Group:		Development/Other
 Url:		http://www.lri.fr/~filliatr/software.en.html
