@@ -9,7 +9,7 @@ Version:	0.7
 Release:	10
 License:	LGPLv2+
 Group:		Development/Other
-Url:		http://www.lri.fr/~filliatr/software.en.html
+Url:		https://www.lri.fr/~filliatr/software.en.html
 Source0:	http://www.lri.fr/~filliatr/ftp/ocaml/ds/%{modname}-%{version}.tar.bz2
 Source1:	ocaml-creal-META
 BuildRequires:	ocaml
