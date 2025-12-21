@@ -12,6 +12,11 @@ Group:		Development/Other
 Url:		https://www.lri.fr/~filliatr/software.en.html
 Source0:	http://www.lri.fr/~filliatr/ftp/ocaml/ds/%{modname}-%{version}.tar.bz2
 Source1:	ocaml-creal-META
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	ocaml
 BuildRequires:	gmp-devel
 
